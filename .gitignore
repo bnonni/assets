@@ -1,0 +1,29 @@
+# MacOS
+.DS_STORE
+
+# build, dependencies, coverage and test outputs
+out
+dist
+coverage
+node_modules
+compiled
+
+# Logs
+logs
+*.log
+npm-debug.log* 
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# OS generated files
+*.out
+*.tgz
+*.pid
+
+# Custom ignore directory
+.ignore
