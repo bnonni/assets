@@ -1,5 +1,5 @@
 {
-  "name": "taproot-assets",
+  "name": "@bnonni/assets",
   "version": "0.1.0",
   "type": "module",
   "description": "Taproot assets client methods similar @alexbosworth/lightning",
@@ -28,13 +28,13 @@
       "url": "https://github.com/bnonni"
     }
   ],
-  "homepage": "https://github.com/bnonni/taproot-assets",
+  "homepage": "https://github.com/bnonni/assets",
   "bugs": {
-    "url": "https://github.com/bnonni/taproot-assets/issues"
+    "url": "https://github.com/bnonni/assets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/bnonni/taproot-assets.git"
+    "url": "git+ssh://git@github.com/bnonni/assets.git"
   },
   "license": "MIT",
   "files": [
