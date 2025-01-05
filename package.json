@@ -42,9 +42,10 @@
     "src"
   ],
   "keywords": [
-    "bitcoin",
-    "lightning network",
-    "taproot assets"
+    "grpc",
+    "lightning-network",
+    "taproot-assets",
+    "tapd"
   ],
   "publishConfig": {
     "access": "public"
@@ -112,6 +113,7 @@
     "invoices": "^3.0.0",
     "lightning": "^10.22.3",
     "psbt": "^3.0.0",
+    "scclogger": "^0.1.2",
     "tiny-secp256k1": "^2.2.3",
     "type-fest": "^4.31.0"
   }
