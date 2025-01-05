@@ -110,6 +110,7 @@
     "bolt09": "^2.1.0",
     "ecpair": "3.0.0-rc.0",
     "invoices": "^3.0.0",
+    "lightning": "^10.22.3",
     "psbt": "^3.0.0",
     "tiny-secp256k1": "^2.2.3",
     "type-fest": "^4.31.0"
