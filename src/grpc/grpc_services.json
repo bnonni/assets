@@ -9,6 +9,7 @@
     "RFQ": "rfqrpc",
     "TapChannel": "tapchannelrpc",
     "TapDev": "tapdevrpc",
+    "TaprootAssets": "taprootassetsrpc",
     "Universe": "universerpc"
   },
   "protoFiles": {
@@ -18,16 +19,19 @@
     "RFQ": "rfq.proto",
     "TapChannel": "tapchannel.proto",
     "TapDev": "tapdev.proto",
+    "TaprootAssets": "taprootassets.proto",
     "Universe": "universe.proto"
   },
   "protosDir": "../grpc/protos",
   "serviceTypes": {
     "assetwallet": "AssetWallet",
+    "default": "TaprootAssets",
     "mint": "Mint",
     "price_oracle": "PriceOracle",
     "rfq": "RFQ",
     "tapchannel": "TapChannel",
     "tapdev": "TapDev",
+    "taprootassets": "TaprootAssets",
     "universe": "Universe"
   },
   "unauthenticatedPackageTypes": {

@@ -1,4 +1,4 @@
-import { IsLndResponse } from "./types.js";
+import { IsTapdResponse } from "../tapd_grpc/types.js";
 
 /** Determine if object is an expected LND Object
 
@@ -11,6 +11,6 @@ import { IsLndResponse } from "./types.js";
   @returns
   <Is Expected LND Object Bool>
 */
-export default ({ lnd, method, type }: IsLndResponse) => {
-  return !!lnd && !!lnd[type] && !!lnd[type][method];
+export default ({ tapd, method, type }: IsTapdResponse) => {
+  return !!tapd && !!tapd[type] && !!tapd[type][method];
 };

@@ -17,7 +17,7 @@ export type ApiObject =
     | ServiceClientConstructor
     | ProtobufTypeDefinition;
 
-export interface LND {
+export interface Tapd {
     assetwallet: any;
     mint: any;
     price_oracle: any;
@@ -27,8 +27,8 @@ export interface LND {
     universe: any;
 }
 
-export type IsLndResponse = {
-    lnd: LND;
+export type IsTapdResponse = {
+    tapd: Tapd;
     method: string;
     type:
     | 'assetwallet'
