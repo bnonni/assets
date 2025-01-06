@@ -18,6 +18,7 @@ export type ApiObject =
     | ProtobufTypeDefinition;
 
 export interface Tapd {
+    default: any;
     assetwallet: any;
     mint: any;
     price_oracle: any;
@@ -31,6 +32,7 @@ export type IsTapdResponse = {
     tapd: Tapd;
     method: string;
     type:
+    | 'default'
     | 'assetwallet'
     | 'mint'
     | 'price_oracle'

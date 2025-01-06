@@ -1,12 +1,9 @@
 {
   "compilerOptions": {
-    "lib": [
-      "DOM",
-      "ES2022",
-    ],
     "target": "ES2022",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "allowJs": false,
     "strict": true,
     "declaration": true,
     "declarationMap": true,
@@ -15,13 +12,13 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "declarationDir": "dist/types",
-    "outDir": "dist/esm"
+    "outDir": "dist",
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "node_modules",
-    "eslint.config.cjs"
+    "eslint.config.cjs",
+    "node_modules"
   ]
 }

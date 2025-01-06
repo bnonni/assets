@@ -1,7 +1,8 @@
 export interface IReturnResultArgs {
     reject: (arg: any) => any;
     resolve: (arg?: any) => any;
-    of: string | number;
+    of: any;
+    cbk: Callback;
 }
 
-export type CallbackFunction = (arg0?: any, arg1?: any) => any;
+export type Callback = (err?: Error | null | undefined, result?: any) => void;

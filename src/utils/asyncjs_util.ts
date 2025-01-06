@@ -1,4 +1,4 @@
-import { CallbackFunction, IReturnResultArgs } from "./types.js";
+import { Callback, IReturnResultArgs } from "./types.js";
 
 /** Return a specific result of an async/auto process
 
@@ -14,12 +14,12 @@ import { CallbackFunction, IReturnResultArgs } from "./types.js";
   @returns
   <Function> (err, res) => {}
 */
-export const returnResult = ({ reject, resolve, of }: IReturnResultArgs, cbk: CallbackFunction) => {
+export const returnResult = ({ reject, resolve, of, cbk }: IReturnResultArgs) => {
     if (!cbk && !(!!reject && !!resolve)) {
         throw new Error('ExpectedCbkOrPromiseFunctionsToReturnResult');
     }
 
-    return (err: null | undefined, res: { [x: string]: undefined; }) => {
+    return (err: any, res: any) => {
         if (!!err) {
             return !cbk ? reject(err) : cbk(err);
         }

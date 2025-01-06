@@ -11,7 +11,7 @@ import {
 import { AuthParams } from '../grpc/types.js';
 import apiForProto from './api_for_proto.js';
 import grpcCredentials from './grpc_credentials.js';
-import { LND } from './types.js';
+import { Tapd } from './types.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const GRPC_SSL_CIPHER_SUITES = process.env.GRPC_SSL_CIPHER_SUITES;
@@ -19,9 +19,9 @@ const pathForProto = (proto: string) => join(__dirname, protosDir, proto);
 
 /**
  * Initiate a gRPC API Methods Object for authenticated methods
- * Both the cert and macaroon expect the entire serialized LND generated file
+ * Both the cert and macaroon expect the entire serialized Tapd generated file
  * {
-    [cert]: <Base64 or Hex Serialized LND TLS Cert>
+    [cert]: <Base64 or Hex Serialized Tapd TLS Cert>
     [macaroon]: <Base64 or Hex Serialized Macaroon String>
     [path]: <Path to Proto Files Directory String>
     [socket]: <Host:Port Network Address String>
@@ -48,7 +48,7 @@ const pathForProto = (proto: string) => join(__dirname, protosDir, proto);
   }
 */
 
-export default ({ cert, macaroon, path, socket }: AuthParams): { lnd: LND } => {
+export default ({ cert, macaroon, path, socket }: AuthParams): { lnd: Tapd } => {
   const { credentials } = grpcCredentials({ cert, macaroon });
   const lndSocket = socket || defaultSocket;
 

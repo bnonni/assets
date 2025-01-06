@@ -1,5 +1,5 @@
 import { HandleRemoveListenerParams } from "./types.js";
-import { sumOf } from "./utils.js";
+import { sumOf } from "../utils/generic.js";
 
 /**
  * Get a function that emits an error from a gRPC subscription proxy
