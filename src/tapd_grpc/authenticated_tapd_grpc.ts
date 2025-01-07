@@ -32,25 +32,23 @@ const pathForProto = (proto: string) => join(__dirname, protosDir, proto);
 
   @returns
   {
-    lnd: {
-      autopilot: <Autopilot API Methods Object>
-      chain: <ChainNotifier API Methods Object>
-      default: <Default API Methods Object>
-      invoices: <Invoices API Methods Object>
-      peers: <Peers API Methods Object>
-      router: <Router API Methods Object>
-      signer: <Signer Methods API Object>
-      tower_client: <Watchtower Client Methods Object>
-      tower_server: <Watchtower Server Methods API Object>
-      wallet: <WalletKit gRPC Methods API Object>
-      version: <Version Methods API Object>
+    tapd: {
+      assetwallet: <>
+      default: <>
+      mint: <>
+      price_oracle: <>
+      rfq: <>
+      tapchannel: <>
+      tapdev: <>
+      taprootassets: <>
+      universe: <>
     }
   }
 */
 
-export default ({ cert, macaroon, path, socket }: AuthParams): { lnd: Tapd } => {
+export default ({ cert, macaroon, path, socket }: AuthParams): { tapd: Tapd } => {
   const { credentials } = grpcCredentials({ cert, macaroon });
-  const lndSocket = socket || defaultSocket;
+  const tapdSocket = socket || defaultSocket;
 
   if (!!cert && GRPC_SSL_CIPHER_SUITES !== grpcSslCipherSuites) {
     process.env.GRPC_SSL_CIPHER_SUITES = grpcSslCipherSuites;
@@ -63,7 +61,7 @@ export default ({ cert, macaroon, path, socket }: AuthParams): { lnd: Tapd } => 
 
   // Assemble different services from their proto files
   return {
-    lnd: Object.keys(serviceTypes).reduce((services: any, type: string): any => {
+    tapd: Object.keys(serviceTypes).reduce((services: any, type: string): any => {
       const service = serviceTypes[type];
       const file = protoFiles[service];
 
@@ -72,7 +70,7 @@ export default ({ cert, macaroon, path, socket }: AuthParams): { lnd: Tapd } => 
         params,
         service,
         path: !!path ? join(path, file) : pathForProto(file),
-        socket: lndSocket,
+        socket: tapdSocket,
         type: packageTypes[service],
       });
 

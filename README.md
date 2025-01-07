@@ -15,7 +15,7 @@ the TAPD directory. (~/.tapd or ~/Library/Application Support/Tapd)
 
 You can then use these to interact with your TAPD directly.
 
-    ```ts
+```ts
 import { authenticatedTapdGrpc } from 'assets';
 // cjs: const { authenticatedTapdGrpc } = require('assets');
 
@@ -24,7 +24,7 @@ const { tapd } = authenticatedTapdGrpc({
     macaroon: 'base64 encoded admin.macaroon from taproot-assets dir',
     socket: '127.0.0.1:10029',
 });
-    ```
+```
 
 ## Methods
 

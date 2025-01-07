@@ -2,7 +2,7 @@ export * from './grpc/index.js';
 export * from './grpc/types.js';
 
 export * from './tapd_grpc/api_for_proto.js';
-export * from './tapd_grpc/authenticated_lnd_grpc.js';
+export * from './tapd_grpc/authenticated_tapd_grpc.js';
 export * from './tapd_grpc/decode_serialized.js';
 export * from './tapd_grpc/grpc_credentials.js';
 export * from './tapd_grpc/grpc_options.js';
